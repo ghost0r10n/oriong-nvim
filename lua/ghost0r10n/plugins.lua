@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
 	}
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 	use('mfussenegger/nvim-jdtls')
+
+
 	use {
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -32,6 +34,13 @@ return require('packer').startup(function(use)
 			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		}
+	}
+	use {
+		'goolord/alpha-nvim',
+		requires = { 'nvim-tree/nvim-web-devicons' },
+		config = function()
+			require 'alpha'.setup(require 'alpha.themes.startify'.config)
+		end
 	}
 
 
