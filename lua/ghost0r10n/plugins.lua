@@ -23,7 +23,15 @@ return require('packer').startup(function(use)
 	}
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 	use('mfussenegger/nvim-jdtls')
-
+	use {
+		"jinzhongjia/LspUI.nvim",
+		branch = 'main',
+		config = function()
+			require("LspUI").setup({
+				prompt = false
+			})
+		end
+	}
 
 	use {
 		"nvim-neo-tree/neo-tree.nvim",
