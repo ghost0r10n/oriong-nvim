@@ -26,11 +26,6 @@ return require('packer').startup(function(use)
 	use {
 		"jinzhongjia/LspUI.nvim",
 		branch = 'main',
-		config = function()
-			require("LspUI").setup({
-				prompt = false
-			})
-		end
 	}
 
 	use {
