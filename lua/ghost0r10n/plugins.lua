@@ -15,16 +15,42 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- Useful Plugins
 	use { 'echasnovski/mini.nvim', branch = 'stable' }
+	use "arnamak/stay-centered.nvim"
+	-- install without yarn or npm
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
 
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = {
+				"markdown" }
+		end,
+		ft = { "markdown" },
+	})
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		'nvim-telescope/telescope.nvim',
 		-- or                            , branch = '0.1.x',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 	use('mfussenegger/nvim-jdtls')
-
-
+	use {
+		'akinsho/flutter-tools.nvim',
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'stevearc/dressing.nvim', -- optional for vim.ui.select
+		},
+	}
+	use {
+		'VonHeikemen/fine-cmdline.nvim',
+		requires = {
+			{ 'MunifTanjim/nui.nvim' }
+		}
+	}
 	use {
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",

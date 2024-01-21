@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/ghost0r10n/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,6 +79,12 @@ _G.packer_plugins = {
     path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["alpha-nvim"] = {
+    config = { "\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0" },
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/barbar.nvim",
@@ -93,6 +99,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["fine-cmdline.nvim"] = {
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/fine-cmdline.nvim",
+    url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
+  },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -109,6 +130,11 @@ _G.packer_plugins = {
     path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -118,6 +144,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["mini.nvim"] = {
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
+  },
+  ["neo-tree.nvim"] = {
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -154,6 +195,11 @@ _G.packer_plugins = {
     path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["stay-centered.nvim"] = {
+    loaded = true,
+    path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/stay-centered.nvim",
+    url = "https://github.com/arnamak/stay-centered.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/ghost0r10n/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -172,6 +218,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

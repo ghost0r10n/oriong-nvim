@@ -38,3 +38,12 @@ require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').jdtls.setup({})
 require('lspconfig').pyright.setup({})
 require('lspconfig').bashls.setup({})
+require('lspconfig').html_lsp.setup({
+
+})
+local dart_lsp = lsp_zero.build_options('dartls', {})
+require('flutter-tools').setup({
+	lsp = {
+		capabilities = dart_lsp.capabilities
+	}
+})
